@@ -391,3 +391,31 @@ body::before {
 .pokemon-card.dark { background: linear-gradient(135deg, #705848, #49392F); }
 .pokemon-card.steel { background: linear-gradient(135deg, #B8B8D0, #787887); }
 .pokemon-card.fairy { background: linear-gradient(135deg, #EE99AC, #9B6470); }
+
+/* Curiosidades */
+
+section.curiosidade {
+    color: #000;
+    background-color: white;
+    width: 90%;
+    height: 100vh;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 16px;
+}
+
+.curiosidade-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+    margin: 1.5rem;
+}
+
+.box-curiosidade {
+    background-color: #2a75bb;
+    border-radius: 16px;
+    max-width: 240px;
+    height: 200px;
+    padding: 3rem 2.5rem;
+}
