@@ -2,34 +2,46 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!-- Fonts do GoogleFonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+    <!-- Links CSS -->
+    <link rel="stylesheet" type="text/css" href="reset.css">
+    <link rel="stylesheet" type="text/css" href="header.css">
+
+  <title>Pokédex Perfil</title>
 </head>
 
 <body>
-  <header class="header">
+ <header class="header">
     <div class="container">
-      <div class="container-esquerda">
-        <img class="imagem-poke" src="./assets/pokegif.gif" alt="Pokébola girando">
-        <h1 class="titulo">Pokémon</h1>
-      </div>
+        <div class="container-esquerda">
+            <img class="imagem-poke" src="./assets/pokegif.gif" alt="Pokébola girando">
+            <h1 class="titulo">Pokémon</h1>
+        </div>
+        
+        <button class="menu-toggle">☰</button>
 
-      <div>
-        <nav class="container-direita">
-          <a href="pagina-inicial.html" class="texto ativo">Início</a>
-          <a href="#pokedex">Pokédex</a>
-          <a href="pagina-curiosidades.html">Curiosidades</a>
-          <a href="pagina-game.html">Game</a>
-          <a href="pagina-perfil.html">
-            <img src="./assets/user-round (1).svg" alt="Perfil do usuário">
-          </a>
-        </nav>
-      </div>
+        <div>
+            <nav class="container-direita">
+                <a href="pagina-inicial.html" class="texto">Início</a>
+                <a href="pagina-inicial.html#pokedex">Pokédex</a>
+                <a href="pagina-curiosidades.html" class="texto ativo">Curiosidades</a>
+                <a href="pagina-game.html">Game</a>
+                <a href="pagina-perfil.html">
+                    <img src="./assets/user-round (1).svg" alt="Perfil do usuário">
+                </a>
+            </nav>
+        </div>
     </div>
     <div class="linha"></div>
-  </header>
+</header>
   <div>Perfil</div>
   <script src="code.js"></script>
   </body>

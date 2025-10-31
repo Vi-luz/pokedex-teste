@@ -4,41 +4,97 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" type="text/css" href="style.css">
-  <script src="code.js" defer></script>
+
+  <!-- Fonts do GoogleFonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Press+Start+2P&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
+
+  <!-- Links do css -->
+  <link rel="stylesheet" type="text/css" href="reset.css">
+  <link rel="stylesheet" type="text/css" href="header.css">
+  <link rel="stylesheet" type="text/css" href="paginaCuriosidade.css">
+  
   <title>Pokédex - Curiosidades</title>
 </head>
 
 <body>
   <header class="header">
     <div class="container">
-      <div class="container-esquerda">
-        <img class="imagem-poke" src="./assets/pokegif.gif" alt="Pokébola girando">
-        <h1 class="titulo">Pokémon</h1>
-      </div>
+        <div class="container-esquerda">
+            <img class="imagem-poke" src="./assets/pokegif.gif" alt="Pokébola girando">
+            <h1 class="titulo">Pokémon</h1>
+        </div>
 
-      <div>
-        <nav class="container-direita">
-          <a href="pagina-inicial.html" class="texto ativo">Início</a>
-          <a href="#pokedex">Pokédex</a>
-          <a href="pagina-curiosidades.html">Curiosidades</a>
-          <a href="pagina-game.html">Game</a>
-          <a href="pagina-perfil.html">
-            <img src="./assets/user-round (1).svg" alt="Perfil do usuário">
-          </a>
-        </nav>
-      </div>
+        <button class="menu-toggle">☰</button>
+
+        <div>
+            <nav class="container-direita">
+                <a href="pagina-inicial.html" class="texto">Início</a>
+                <a href="pagina-inicial.html#pokedex">Pokédex</a>
+                <a href="pagina-curiosidades.html" class="texto ativo">Curiosidades</a>
+                <a href="pagina-game.html">Game</a>
+                <a href="pagina-perfil.html">
+                    <img src="./assets/user-round (1).svg" alt="Perfil do usuário">
+                </a>
+            </nav>
+        </div>
     </div>
     <div class="linha"></div>
-  </header>
+</header>
 
   <section class="curiosidade">
     <div class="curiosidade-box">
-      <div class="box-curiosidade">
-        Pokémon só exite por que o autor era fã de caçar insetos
+      <div class="trivia">
+        Origem nos Insetos: O criador de Pokémon, Satoshi Tajiri
+        (cujo nome é usado para o personagem Ash em japonês),
+        baseou a ideia da franquia em seu hobby de infância de colecionar insetos.
+        Seu rival, Gary, é uma homenagem a Shigeru Miyamoto, criador de Mario.
       </div>
-      <div class="box-curiosidade">NOS JOGOS TEMOS 891 POKÉMONS,
-         e mais de mil se considerarmos versões alternativas de mesmas criaturas como as formas de Alola e Galarian.</div>
+      <div class="trivia">
+        O Nome do Pikachu: O nome Pikachu vem da combinação de duas onomatopeias japonesas: 
+        "Pika" (som de eletricidade) e "Chu" (som de rato). 
+        O design do personagem é, de fato, inspirado em um roedor com poderes elétricos.
+      </div>
+      <div class="trivia">
+        Episódio Banido: Um episódio do anime (o de Porygon) causou cerca de 700 convulsões
+        em crianças no Japãodevido a luzes intermitentes em alta frequência.
+        Desde então, Porygon e suas evoluções raramente aparecem no anime.
+      </div>
+      <div class="trivia">
+        Nomes de Lutadores: Os Pokémon lutadores Hitmonlee e Hitmonchan foram nomeados em homenagem
+        aos famosos mestres de kung fu da vida real, Bruce Lee e Jackie Chan, respectivamente.
+      </div>
+      <div class="trivia">
+        "Capsule Monsters": O nome original planejado para a franquia era "Capsule Monsters",
+        mas problemas de registro de marca forçaram a mudança para "Pokémon" (abreviação de "Pocket Monsters").
+      </div>
+      <div class="trivia">
+        O Primeiro Pokémon Criado: Embora Bulbasaur seja o primeiro na Pokédex,
+        o primeiro Pokémon a ser conceitualmente criado (e projetado) foi Rhydon.
+      </div>
+      <div class="trivia">
+        PETA x Pokémon: O grupo de defesa dos direitos dos animais PETA criou um jogo paródia chamado
+        "Pokémon: Black & Blue" para protestar contra o que consideravam um tratamento desumano dos animais
+        (fictícios) dentro das Pokébolas e em batalhas.
+      </div>
+      <div class="trivia">
+        Dinheiro Real com Pokémon: A ilha de Niue,
+        um pequeno país insular no Pacífico Sul, chegou a produzir moedas de curso legal com imagens
+        oficiais de Pokémon, incluindo Pikachu e Mew, em 2001.
+      </div>
+      <div class="trivia">
+        O Mapa Incorreto: Na primeira geração de jogos (Red/Blue), o mapa dentro do jogo mostra o
+        Indigo Plateau na mesma linha de Cerulean, o que é geograficamente incorreto em relação ao mapa
+        conceitual. Isso foi um erro devido a limitações de tela do Game Boy original que não foi corrigido
+        nas versões ocidentais.
+      </div>
+      <div class="trivia">
+        Os Pokémon Mais Pesados: Os Pokémon Cosmoem e Celesteela estão empatados como
+        os mais pesados da franquia, ambos com impressionantes 999,9 quilogramas.
+      </div>
     </div>
   </section>
   <script src="code.js"></script>

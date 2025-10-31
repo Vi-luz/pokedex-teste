@@ -1,0 +1,151 @@
+/*Seção inicial*/
+.inicio {
+    display: flex;
+    align-items: center;
+    min-height: 90vh;
+    padding: 4rem 2rem;
+    background: url("assets/background-ash.jpg") center/cover no-repeat fixed;
+    position: relative;
+    color: #fff;
+}
+
+.inicio::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.4) 30%,
+        rgba(0, 0, 0, 0.3) 100%);
+    z-index: 0;
+}
+
+.inicio-conteudo {
+    position: relative;
+    z-index: 1;
+    max-width: 650px;
+    margin-left: 5%;
+    text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9);
+}
+
+.inicio-titulo {
+    font-family: "Archivo Black", sans-serif;
+    font-size: 2rem;
+    line-height: 1.4;
+    margin-bottom: 1.8rem;
+    color: #fff;
+}
+
+.inicio-subtitulo {
+    font-family: "Roboto Mono", monospace;
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+.inicio-texto {
+    font-family: "Roboto Mono", monospace;
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #f2f2f2;
+    max-width: 600px;
+}
+
+/*Overlay global*/
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, 
+        rgba(0, 0, 0, 0.5) 0%,
+        rgba(0, 0, 0, 0.4) 30%,
+        rgba(0, 0, 0, 0.3) 100%);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/*Garante que o conteúdo fique acima do overlay*/
+.inicio-conteudo,
+.busca-filtros,
+.lista-pokemons {
+    position: relative;
+    z-index: 1;
+}
+
+/*Animações*/
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.inicio-conteudo {
+    animation: aparecer 1.5s ease forwards;
+}
+
+/*Responsividade página inicial*/
+@media (max-width: 768px) {
+    .inicio-titulo {
+        font-size: 1.4rem;
+    }
+    
+    .inicio-texto {
+        font-size: 0.9rem;
+    }
+    
+    .inicio {
+        padding: 2rem 1rem;
+        min-height: 80vh;
+    }
+}
+/*Botão carregar mais*/
+.botao-carregar-mais {
+    display: block;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, #2a75bb, #e3350d);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-family: "Press Start 2P", cursive;
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border: 2px solid #ffcb05;
+}
+
+.botao-carregar-mais:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    background: linear-gradient(135deg, #e3350d, #2a75bb);
+}
+
+.botao-carregar-mais:active {
+    transform: translateY(0);
+}
+
+/*Menssagem vazia*/
+.mensagem-vazia {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 3rem;
+    font-size: 1.2rem;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.3);
+    border-radius: 12px;
+    margin: 2rem 0;
+    font-family: "Roboto Mono", monospace;
+}

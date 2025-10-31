@@ -1,0 +1,174 @@
+/*Header principal*/
+.header {
+    background: linear-gradient(90deg, #ffcb05 0%, #ffffff 50%, #2a75bb 100%);
+    box-shadow: var(--sombra-header); 
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    min-height: 80px;
+}
+
+.header.scrolled {
+    background: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.4s ease;
+}
+
+/*Container do header*/
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem 2rem;
+    flex-wrap: wrap;
+    min-height: 60px;
+}
+
+/*Lado esquerdo do header*/
+.container-esquerda {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.imagem-poke {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+
+.titulo {
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 2.2rem;
+    color: #ffcb05;
+    text-shadow: 
+        -3px -3px 0 var(--cor-segundaria),
+        3px -3px 0 var(--cor-segundaria),
+        -3px 3px 0 var(--cor-segundaria),
+        3px 3px 0 var(--cor-segundaria),
+        0 0 12px rgba(255, 203, 5, 0.7);
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.titulo:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    text-shadow: 
+    -3px -3px 0 var(--cor-segundaria),
+    3px -3px 0 var(--cor-segundaria),
+    -3px 3px 0 var(--cor-segundaria),
+    3px 3px 0 var(--cor-segundaria),
+    0 0 15px rgba(255, 203, 5, 0.7);
+}
+
+/*Lado direito do header*/
+.container-direita {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.container-direita a {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.95rem;
+    color: var(--cor-texto);
+    padding: 0.5rem 0.25rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    position: relative;
+    font-weight: bold;
+}
+
+.container-direita a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 0;
+    height: 3px;
+    background:linear-gradient(90deg, var(--cor-principal), var(--cor-segundaria));
+    border-radius: 3px;
+    transition: width 0.3s ease-in-out;
+}
+
+.container-direita a:hover::after,
+.container-direita a.ativo::after {
+    width: 100%;
+}
+
+.texto {
+    font-family: "Roboto Mono", monospace;
+    font-size: 0.95rem;
+    text-decoration: none;
+    color: var(--cor-texto);
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem;
+    font-weight: 500;
+}
+
+.texto:hover {
+    color: var(--cor-principal);
+    transform: translateX(-2px);
+}
+
+.ativo {
+    color: var(--cor-principal);
+    font-weight: 600;
+}
+
+.ativo::after{
+    content: "";
+    position: absolute;
+    bottom: -8px;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: linear-gradient(90deg, #e3350d, #2a75bb);
+    border-radius: 2px;
+}
+
+/*Elementos do header*/
+.linha {
+    width: 100%;
+    border-bottom: 2px solid #e3350d;
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+}
+
+/*Responsividade do header*/
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+    
+    .container-direita {
+        display: none;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 1rem;
+        border-top: 2px solid var(--cor-principal);
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+    }
+
+    .container-direita.ativo {
+        display: flex;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+    }
+}
