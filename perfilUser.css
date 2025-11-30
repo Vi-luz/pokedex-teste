@@ -1,0 +1,194 @@
+body {
+    background: url("assets/background-ash.jpg") center/cover no-repeat fixed;
+    font-family: "Inter", sans-serif;
+    color: #222;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+    margin: 60px auto;
+    width: 85%;
+    max-width: 900px;
+
+    background: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(6px);
+    border-radius: 25px;
+    padding: 3.5rem 2.5rem;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+    animation: fadeIn .7s ease-out;
+}
+
+.foto {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+}
+
+.profile-wrapper {
+    position: relative;
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+
+/* imagem do perfil */
+.perfilImage {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid rgba(255, 255, 255, 0.7);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform .25s ease, filter .25s ease;
+}
+
+/* ícone de edição*/
+.edit-icon {
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
+
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(0, 0, 0, 0.60);
+    border-radius: 50%;
+
+    padding: 6px;
+    box-sizing: border-box;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(4px) scale(0.98);
+    transition: opacity 0.25s ease, transform 0.18s ease;
+}
+
+.edit-icon img {
+    width: 20px;
+    height: 20px;
+    filter: brightness(5);
+    display: block;
+}
+
+/* hover: mostra o ícone e aplica efeito leve na imagem */
+.profile-wrapper:hover .edit-icon {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0) scale(1.03);
+}
+
+.profile-wrapper:hover .perfilImage {
+    filter: brightness(0.8);
+    transform: scale(1.02);
+}
+
+/* nome */
+.foto .name {
+    margin-top: 15px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #111;
+}
+
+section {
+    width: 100%;
+    background: white;
+    padding: 20px 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+    animation: slideUp .6s ease-out;
+}
+
+/* Títulos das seções */
+section h2 {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+    font-weight: 700;
+    border-left: 5px solid #ff4757;
+    padding-left: 10px;
+}
+
+/* ======= SOBRE MIM ======= */
+.info {
+    min-height: 120px;
+}
+
+.text-area {
+    width: 100%;
+    min-height: 120px;
+
+    padding: 15px;
+    font-size: 1rem;
+    font-family: "Inter", sans-serif;
+
+    background: #f8f8f8;
+    color: #333;
+
+    border: 2px solid #ddd;
+    border-radius: 12px;
+
+    resize: vertical;
+    outline: none;
+
+    transition: 0.25s ease;
+}
+
+/* quando clica na caixa */
+.text-area:focus {
+    border-color: #ff4757;
+    background: #fff;
+    box-shadow: 0 0 10px rgba(255, 71, 87, 0.35);
+}
+
+/* ======= FAVORITOS ======= */
+fav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.fav-card {
+    width: 120px;
+    background: #fff;
+    padding: 10px;
+    border-radius: 12px;
+    text-align: center;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.fav-card:hover {
+    transform: scale(1.05);
+}
+
+.fav-card img {
+    width: 100%;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(15px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 480px) {
+    .profile-wrapper { width: 120px; height: 120px; }
+    .edit-icon { width: 36px; height: 36px; }
+    .favoritos .fav { grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
+}

@@ -40,7 +40,6 @@
             <a href="pagina-inicial.html" class="texto ativo">Início</a>
             <a href="pagina-inicial.html#pokedex" class="texto">Pokédex</a>
             <a href="pagina-curiosidades.html" class="texto">Curiosidades</a>
-            <a href="pagina-game.html" class="texto">Game</a>
             <a href="pagina-perfil.html" aria-label="Perfil do Usuário">
               <img src="./assets/user-round (1).svg" alt="Icone do usuário">
             </a>
@@ -70,14 +69,15 @@
   
     <!-- Seção Pokédex -->
     <section class="busca-filtros" id="pokedex" aria-labelledby="titulo-pokedex">
-      <h2 id="titulo-pokedex" class="sr-only">Busca e filtros da Pokédex</h2><!-- Texto para acessibilidade -->
+      <h2 id="titulo-pokedex" class="sr-only">Procure um Pokémon</h2><!-- Texto para acessibilidade -->
 
       <div class="busca">
-        <input type="text" id="text-busca" placeholder="Buscar pokémon" aria-label="Buscar Pokémon"/>
+        <input type="text" id="text-busca" placeholder="Nome ou id do pokémon" aria-label="Buscar Pokémon"/>
       </div>
 
       <div class="filtros">
-        <select id="filtro-geracao" aria-label="Filtrar por geração">  
+        <select id="filtro-geracao" aria-label="Filtrar por geração">
+          <option value="all-gen">Todos os Pokemon</option>
           <option value="primeira-gen">Primeira Geração</option>
           <option value="segunda-gen">Segunda Geração</option>
           <option value="terceira-gen">Terceira Geração</option>
@@ -115,12 +115,13 @@
 
     <!-- Lista de Pokémons -->
     <section class="lista-pokemons" id="lista-pokemons" aria-live="polite">
-      <!-- Conteúdo gerado pelo JavaScripc -->
+      <!-- Conteúdo gerado pelo JavaScript -->
     </section>
 
   </main>
 
   <!-- Scripts -->
   <script src="code.js" defer></script>
+  <script src="header.js"></script>
 </body>
 </html>

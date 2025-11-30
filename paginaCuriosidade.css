@@ -3,9 +3,9 @@
     color: #000;
     background-color: white;
     width: 90%;
-    min-height: 100vh;
+    min-height: 50vh;
     margin: auto;
-    margin-top: 50px;
+    margin-top: 100px;
     border-radius: 16px;
     padding: 2rem;
     background: linear-gradient(135deg, rgb(240, 0, 0), rgb(248, 128, 128), rgb(255, 255, 255));

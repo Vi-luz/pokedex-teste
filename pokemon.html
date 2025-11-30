@@ -1,10 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <!-- Fonts do GoogleFonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -14,19 +12,18 @@
     <!-- Links CSS -->
     <link rel="stylesheet" type="text/css" href="reset.css">
     <link rel="stylesheet" type="text/css" href="header.css">
-    <link rel="stylesheet" type="text/css" href="perfilUser.css">
-
-    <title>Pokédex Perfil</title>
+    <link rel="stylesheet" type="text/css" href="perfilPokemom.css">
+    <title>Document</title>
 </head>
-
 <body>
     <header class="header">
         <div class="container">
+
             <div class="container-esquerda">
                 <img class="imagem-poke" src="./assets/pokegif.gif" alt="Pokébola girando">
                 <h1 class="titulo">Pokémon</h1>
             </div>
-        
+
             <button class="menu-toggle">☰</button>
 
             <div>
@@ -42,28 +39,48 @@
         </div>
         <div class="linha"></div>
     </header>
-    <main class="main">
-        <section class="foto">
-            <div class="profile-wrapper">
-                <img class="perfilImage" src="assets/gato.jpg" alt="Imagem de perfil">
-                <img class="edit-icon" src="assets/pencil.svg" alt="Editar foto">
-            </div>
+    <div class="perfil-container">
 
-            <input type="file" id="perfilUpload" accept="image/*" style="display:none">
-            <h1 class="name" id="userName" contenteditable="true">Victor</h1>
-        </section>
+        <div class="perfil-esquerda">
 
-        <section class="info">
-            <h2>Sobre mim</h2>
-            <textarea class="text-area" placeholder="Escreva algo sobre você..."></textarea>
-        </section>
+            <h1 id="nomePokemon">Carregando...</h1>
 
-        <section class="favoritos">
-            <h2>Pokémons Favoritos</h2>
-            <div class="fav"></div>
-        </section>
-    </main>
-    <script src="perfilUser.js"></script>
+            <img id="favPerfil" class="fav-perfil" src="assets/heart-empty.png" alt="Favoritar">
+            
+            <img id="sprite" alt="Imagem do Pokémon">
+
+            <h2 class="section-title">Status Base</h2>
+
+            <div id="stats"></div>
+
+        </div>
+
+        <div class="perfil-direita">
+
+            <section class="info-box">
+                <div class="info">
+                    <h2>Informações</h2>
+                    <p id="infoPokemon"></p>
+                </div>
+
+                <div class="skills">
+                    <h2>Habilidades</h2>
+                    <ul id="abilities"></ul>
+                </div>
+            </section>
+
+            <section class="types-box">
+                <h2>Tipos</h2>
+                <p id="tipos" class="type-chips"></p>
+            </section>
+
+            <h2 class="section-title">Movimentos</h2>
+            <ul id="movesPokemon" class="scroll-list"></ul>
+            
+        </div>
+    </div>
+
+    <script src="pokemon.js"></script>
     <script src="header.js"></script>
-  </body>
+</body>
 </html>
